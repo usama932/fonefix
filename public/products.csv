@@ -1,0 +1,20 @@
+﻿Name,Brand,Sku,"Purchase Price","Sale Price",Margin,"Minimum Sale Price","Maximum Discount","Short Description",Description,Warranty,"Location Rack","Location Row","Location Position",Quantity,"Alert Quantity","Serial Number",IMEI,"Product Description",Category,"Manage Stock",Active
+"Iphone 11 Orginal Display",Apple,FF-346561,4400.00,8800.00,4400.00,,0.00,"<p>Iphone 11 Orginal Display<br></p>","<p>Iphone 11 Orginal Display<br></p>",,,,,1,1,,,No,"ORG LCD",Yes,Yes
+"Iphone 11 Back Glass",Apple,FF-216283,350.00,700.00,350.00,,0.00,"<p>Iphone 11 Back Glass<br></p>","<p>Iphone 11 Back Glass<br></p>",,,,,0,1,,,No,"Glass items",Yes,Yes
+"Service Charge",Apple,FF-237262,0.00,1.00,1.00,,0.00,"<p>Service Charge<br></p>","<p>Service Charge<br></p>",,,,,0,0,,,No,"Service Products",No,Yes
+"Payment for Mobile Repairing Professional Training",Apple,FF-395645,1.00,1.00,0.00,,0.00,"<p>Payment for Mobile Repairing Professional Training&nbsp;<br></p>","<p>Payment for Mobile Repairing Professional Training&nbsp;<br></p>",,,,,0,0,,,No,"Service Products",No,Yes
+"Battery MOBT Vivo Y69",Vivo,FF-872189,480.00,750.00,270.00,700.00,0.00,"<p>Battery MOBT Vivo Y69<br></p>","<p>Battery MOBT Vivo Y69<br></p>",,,,,0,1,,,No,Battery,Yes,Yes
+"VIVO Y51 DISPLAY",Vivo,FF-584974,2500.00,2500.00,0.00,,0.00,<p>DONE</p>,"<p>REPAIR COMPLETED</p>",,,,,0,0,,,No,"LED/LCD DISPLAY",No,No
+"VIVO V15 PRO",Vivo,FF-965201,1800.00,1800.00,0.00,,0.00,<p>DONE</p>,<p>DONE</p>,,,,,0,0,,,No,"LED/LCD DISPLAY",No,No
+"Poco x3 pro (original display)",Xiaomi,FF-939162,0.00,4500.00,4500.00,,0.00,,"Display and total frame changed",,,,,0,0,,,No,"LED/LCD DISPLAY",No,Yes
+"SAM M31S LED DISPLAY",Samsung,FF-914768,1.00,2500.00,2499.00,,0.00,,"<p>DISPLAY CHANGED</p>",,,,,0,0,,,No,"LED/LCD DISPLAY",No,Yes
+"XIAOMI NOTE 8 PRO DISPLAY",Xiaomi,FF-380695,800.00,1600.00,800.00,,0.00,,<p>DONE</p>,,,,,0,0,,,No,"ORG LCD",No,Yes
+"XIAOMI NOTE 8 PRO BATTERY",Xiaomi,FF-606736,1000.00,1200.00,200.00,,0.00,,<p>DONE</p>,,,,,0,0,,,No,Battery,No,Yes
+"MI NOTE 8 PRO SUB BOARD+STRIP",Xiaomi,FF-914812,500.00,700.00,200.00,,0.00,,<p>DONE</p>,,,,,0,0,,,No,"Service Products",No,Yes
+"IPHONE X DISPLAY",Apple,FF-145782,2800.00,3400.00,600.00,,0.00,,<p>DONE</p>,,,,,0,0,,,No,"LED/LCD DISPLAY",No,Yes
+"Demetria Ryan",NOKIA,"Alana Richmond",300.00,397.00,97.00,354.00,80.00,,,69,"Halee Cabrera","Olga Benton","Sawyer James",0,0,,,No,"IC WORKS",No,Yes
+"IPHONE XS MAX FLY DISPLAY",Apple,FF-304818,3000.00,6500.00,3500.00,6200.00,0.00,"<p>IPHONE XS MAX FLY DISPLAY<br></p>","<p>IPHONE XS MAX FLY DISPLAY<br></p>",,,,,0,1,,,No,"LED/LCD DISPLAY",Yes,Yes
+"SAMSUNG M01",Samsung,FF-145783,650.00,1600.00,950.00,1500.00,0.00,,"SAMSUNG M01",90,,,,1,1,,,No,"LED/LCD DISPLAY",No,Yes
+"SAMSUNG A30S",Samsung,FF-145784,830.00,1800.00,970.00,1700.00,0.00,,"SAMSUNG A30S",3,,,,2,1,,,No,"LED/LCD DISPLAY",No,Yes
+"SAMSUNG A10S",Samsung,FF-145785,750.00,1500.00,750.00,1400.00,0.00,,"SAMSUNG A10S",3,,,,1,1,,,No,"LED/LCD DISPLAY",No,Yes
+"SAMSUNG A30 WITH FRAME",Samsung,FF-145786,880.00,1800.00,920.00,1700.00,0.00,,"SAMSUNG A30 WITH FRAME",3,,,,1,1,,,No,"LED/LCD DISPLAY",No,Yes

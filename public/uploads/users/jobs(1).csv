@@ -1,0 +1,9 @@
+﻿User,"Contact Number","Email Address","Service Type",Device,Brand,Model,"Job Sheet No","Serial No",Password,Pattern,"Product Configuration","Problem Reported By The Customer","Condition Of The Product",Comment,"Estimate Cost",Status,"Expected Delivery Date",Description
+"Test school",123213213,ttest@gmail.com,"Carry In",Mobile,Oppo,"Oppo Reno 5",FF-20221028122950,1231,123,,213,123,123,1232,12,Completed,2022-11-03,<p>asdas<br></p>
+"Test school",123213213,ttest@gmail.com,"Carry In",Mobile,Oppo,"Oppo Reno 5",FF-20221028123751,435,345,,23423,234,234,asdsa,324,Accept,2022-11-03,<p>dfgfgdf<br></p>
+"Bulk Indian",9094281234,bulk@indian.com,"Carry In",Mobile,Oppo,"Oppo Reno 5",FF-20221111094303,2342342343,2343,,treste,test,test,test,120,Accept,2022-11-17,<p>test<br></p>
+"Test school",123213213,ttest@gmail.com,"Carry In",Mobile,Oppo,"Oppo Reno 5",FF-20221114052043,5345,34534,,3534,345,"345 5345",test,230,Accept,2022-11-22,<p>test<br></p>
+John,9884893017,test@domain.com,"Carry In",Mobile,Oppo,"Oppo F21",FF-20221115092609,1232355,123456,1234,"screen display, bluetooth ","Screen Problem , Light","Good , Scraches","Overall good",100,Accepted,2022-12-18,"Urgent work"
+Doe,9884893017,test1@domain.com,"Pick Up",Laptop,Vivo,"Vivo Lap",FF-20221115092609,12323355,123456,,"screen display, bluetooth ","Wifi , Charging","Best , Srachlees","Condition best",50,Completed,2021-12-15,"Need to be deliver before expected date"
+John,9884893017,test@domain.com,"Carry In",Mobile,Oppo,"Oppo F21",FF-20221115093509,1232355,123456,1234,"screen display, bluetooth ","Screen Problem , Light","Good , Scraches","Overall good",100,Accepted,2022-12-18,"Urgent work"
+Doe,9884893017,test1@domain.com,"Pick Up",Laptop,Vivo,"Vivo Lap",FF-20221115093509,12323355,123456,,"screen display, bluetooth ","Wifi , Charging","Best , Srachlees","Condition best",50,Completed,2021-12-15,"Need to be deliver before expected date"

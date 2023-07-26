@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <script src="https://kit.fontawesome.com/de584875eb.js" crossorigin="anonymous"></script>
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/regular.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <!-- MAIN SITE STYLE SHEETS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <title>Home - DomainName</title>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100 justify-content-center justify-content-md-between">
+    <!-- Header Start -->
+    <header>
+        <!-- Top Header -->
+        <section class="top-head border-bottom d-none d-md-inline">
+            <div class="container">
+                <div class="d-flex justify-content-between py-2">
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item me-2 align-middle"><i class="fa-regular fa-clock me-2 cblue"></i>Open Hours: Mon - Sat - 9:00 - 18:00</li>
+                        <li class="list-inline-item cblue bancher align-middle">
+                            <i class="fa-sharp fa-solid fa-location-dot me-2 cblue"></i><a href="#">Get Directions</a></li>
+                    </ul>
+                    <ul class="list-inline ancher float-end m-0">
+                        <li class="list-inline-item"><a href="#">News & Media</a></li>
+                        <li class="list-inline-item ms-2"><a href="#">Careers</a></li>
+                        <li class="list-inline-item ms-2"><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Main Header -->
+        <section class="main-header border-top py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-3 me-auto py-2">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/logo.png" alt="Logo" width="49" height="49">
+                            <span class="fs-2 ms-3">LOGO</span>
+                        </a>
+                    </div>
+                    <div class="col-auto info d-flex justify-content-md-end">
+                        <div class="d-flex align-items-center px-5">
+                            <span class="cblue me-3"><img src="images/email.png" alt="" class="img-fluid" width="35px"></span>
+                            <span><strong>Email:</strong><br/><span class="clight">demo@example.com</span></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="cblue me-3"><img src="images/house.png" alt="" class="img-fluid" width="35px"></span>
+                            <span><strong>Location:</strong><br/><span class="clight">1256 floor new world.</span></span>
+                        </div>
+                    </div>
+                    <div class="col-auto nav-social d-md-none d-lg-inline d-flex justify-content-md-end ps-5">
+                        <span class="rounded-circle social_icons shadow-sm me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="rounded-circle social_icons shadow-sm me-2 twitter active"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="rounded-circle social_icons shadow-sm"><i class="fa-brands fa-pinterest-p"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav Header -->
+            <div class="container sticky-top">
+
+            </div>
+        </section>
+        <!-- Nav Header -->
+        <section class="nav-header">
+            <nav class="navbar navbar-expand-lg py-lg-0">
+                <div class="container">
+                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav nav-fill w-100">
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Our Service</a>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Solution</a>
+                            </li>
+                            <li class="nav-item dropdown py-2">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu 2
+                                </a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(a)</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(b)</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(c)</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown py-2">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li><a class="dropdown-item text-uppercase" href="#">My Account</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="login-register.html">Login</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <div class="nav-item search dropdown pt-3">
+                                <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <div id="myDropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                </div>
+                            </div>
+                            <li class="nav-item bg-white btn-blue bg-opacity-10 py-2">
+                                <a class="nav-link text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Request Service
+                                </a>
+                                <!-- <a type="button" class="text-decoration-none text-uppercase py-2" href="#">Request Service</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-auto nav-social d-none d-md-block d-lg-none d-flex justify-content-md-end">
+                        <span class="rounded-circle social_icons bg-white shadow-sm me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="rounded-circle social_icons bg-white shadow-sm me-2 twitter"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="rounded-circle social_icons bg-white shadow-sm"><i class="fa-brands fa-pinterest-p"></i></span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+    <main class="d-flex flex-column justify-content-start flex-grow-1 ">
+        <!-- Hero Start-->
+        <section class="hero">
+            <!-- Banner Section -->
+            <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselCaptions" data-bs-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/image-bg-shape.jpg" class="d-block w-100" alt="...">
+                        <div class="container carousel-caption">
+                            <h1 class="py-sm-4 lh-1">The Best Mobile Repair<br> Service Center<br> in Chennai</h1>
+                            <a class="btn btn-blue border fs-6 d-none d-sm-inline" href="#!" role="button">Repair Service</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image-bg-shape.jpg" class="d-block w-100" alt="...">
+                        <div class="container carousel-caption">
+                            <h1 class="py-sm-4 lh-1">The Best Mobile Repair<br> Service Center<br> in Chennai</h1>
+                            <a class="btn btn-blue border fs-6 d-none d-sm-inline" href="#!" role="button">Repair Service</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a> -->
+            </div>
+            <!-- End Banner Section -->
+        </section>
+        <!-- Features Area Start -->
+        <section class="feature bg-cdblue">
+            <!-- Features -->
+            <div class="container">
+                <div class="row pb-3">
+                    <div class="col-12 col-sm-8">
+                        <h2 class="text-white py-4 py-sm-4 py-md-5">Make Your Mobile Repair Sucess<br> & XXXXXXX With Us</h2>
+                    </div>
+                    <div class="col-12 col-sm-4 mt-sm-4 mt-md-5 pt-md-3 text-end">
+                        <button class="btn btn-light rounded-0 border fs-6">Contact Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="about">
+            <!-- Call To Action -->
+            <div class="container action px-0">
+                <div class="row row-cols-2 row-cols-md-4 w-100 mx-0">
+                    <div class="col h-100 mb-3">
+                        <div class="card rounded-1 onhover">
+                            <img src="images/smartphone.png" class="mx-auto mt-5 cblue" alt="Phone" width="40px" height="auto">
+                            <div class="card-body mt-2">
+                                <h6 class="card-title text-center">iPhone Service</h6>
+                            </div>
+                            <small class="ms-2"><hr class="w-75 mx-4 mb-0"></small>
+                        </div>
+                    </div>
+                    <div class="col h-100 mb-3">
+                        <div class="card rounded-1 onhover">
+                            <img src="images/smartphone.png" class="mx-auto mt-5 cblue" alt="Phone" width="40px" height="auto">
+                            <div class="card-body mt-2">
+                                <h6 class="card-title text-center">OnePlus Service</h6>
+                            </div>
+                            <small class="ms-2"><hr class="w-75 mx-4 mb-0"></small>
+                        </div>
+                    </div>
+                    <div class="col h-100 mb-3">
+                        <div class="card rounded-1 onhover">
+                            <img src="images/smartphone.png" class="mx-auto mt-5 cblue" alt="Phone" width="40px" height="auto">
+                            <div class="card-body mt-2">
+                                <h6 class="card-title text-center">Xiaomi Service</h6>
+                            </div>
+                            <small class="ms-2"><hr class="w-75 mx-4 mb-0"></small>
+                        </div>
+                    </div>
+                    <div class="col h-100 mb-3">
+                        <div class="card rounded-1 onhover">
+                            <img src="images/smartphone.png" class="mx-auto mt-5 cblue" alt="Phone" width="40px" height="auto">
+                            <div class="card-body mt-2">
+                                <h6 class="card-title text-center">Samsung Service</h6>
+                            </div>
+                            <small class="ms-2"><hr class="w-75 mx-4 mb-0"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About -->
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-md-6 mb-5 mb-md-2 h-100">
+                        <div class="row img-hover-zoom me-md-5 video-area">
+                            <!-- <img src="images/Layer-6151.jpg" alt="" class="img-fluid mb-2"> -->
+                            <a data-title="Play (k)" id="play">
+                                <i class="fas fa-circle-play cblue bg-white rounded-circle"></i>
+                            </a>
+                            <video controls class="video mb-2" id="video" preload="metadata" poster="images/Layer-6151.jpg">
+                                <source src="https://www.youtube.com/watch?v=ScMzIvxBSi4" type="video/mp4"></source>
+                            </video>
+                            <div class="col-9 about-img pe-2 zoom"><img src="images/Layer-616.jpg" alt="" class="img-fluid" width="100%"></div>
+                            <div class="col-3 about-img ps-0"><img src="images/image.jpg" alt="" class="img-fluid" width="100%"></div>
+                        </div>
+                    </div>  
+                    <div class="col-md-6 mb-2 h-100">
+                        <div class="row">
+                            <div class="col">
+                                <h6 class="text-uppercase cblue"><span class="bline">&nbsp;&nbsp;About Us</span></h6>
+                                <h2 class="">We are Working world With <br><span class="cblue fs-2">5+</span> Years experience</h2>
+                                <p>There is ut duis vel quis dignissim nulla vel hendrerit. ltrices ndimentum tristique maecenas nisl pretium  quam.</p>
+                                <!-- Tabs content -->
+                                <div class="container px-0" style="margin-top: 10px;">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-fill w-100 about-tab">
+                                      <li class="nav-item">
+                                        <a class="nav-link d-flex active" data-bs-toggle="tab" href="#elec">
+                                            <img class="img-tab" src="images/electrician.png" alt="">
+                                            <h6 class="ms-3 text-start">Gaurantee & <br>Maintenance</h6>
+                                        </a>
+                                      </li>
+                                      <li class="nav-item">
+                                        <a class="nav-link d-flex" data-bs-toggle="tab" href="#plum">
+                                            <img class="img-tab" src="images/plumber.png" alt="">
+                                            <h6 class="ms-3 text-start">The Best Quilty <br>Services</h6>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content my-4">
+                                      <div class="tab-pane container px-0 active" id="elec">Labore sed dolore magna aliquay dnim ad minim veniam quis nostrud exercitation ullamco laboris voluptate.</div>
+                                      <div class="tab-pane container px-0 fade" id="plum">Labore sed dolore magna aliquay dnim ad minim veniam quis nostrud exercitation ullamco laboris voluptate.</div>
+                                    </div>
+                                </div>
+                                <!-- Process Bar -->
+                                <p class="process-bar mb-1"><span class="">Repair Done</span><span class="bar-device">45254 Devices</span></p>
+                                <div class="progress rounded-0" style="height: 10px;">
+                                    <div class="progress-bar bg-cblue" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <a class="btn btn-blue border mt-5 fs-6" href="#!" role="button">More About Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Area Start -->
+        <section class="services-area bg-light">
+            <!-- Service -->
+            <div class="container my-4 my-md-5">
+                <div class="row text-center pb-3">
+                    <h6 class="text-uppercase cblue"><span class="bline">&nbsp;&nbsp;Our Service</span></h6>
+                    <h2>What Fixes We Provide</h2>
+                </div>
+            </div>
+        </section>
+        <!-- Service Box -->
+        <section class="services-box w-100">
+            <div class="container-fluid service bg-white py-md-5">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        <div class="col item">
+                            <div class="card text-white rounded-0 h-100">
+                                <img class="card-img img-cover rounded-0" src="images/Layer-617.jpg" alt="Card image" height="" width="auto">
+                                <div class="card-img-overlay mt-auto mb-0 p-0">
+                                    <div class="card-body bg-cblue rounded-0">
+                                        <h5 class="card-title text-white mb-0">Screen Repair</h5>
+                                    </div>
+                                    <div class="card-footer bg-cblue border-0 rounded-0">
+                                        <small class="text-white cover"><i class="fa-solid fa-arrow-right"></i></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col item">
+                            <div class="card bg-dark text-white rounded-0 h-100">
+                                <img class="card-img rounded-0 h-100" src="images/Layer-618.jpg" alt="Card image">
+                                <div class="card-img-overlay mt-auto mb-0 p-0">
+                                    <div class="card-body bg-cblue rounded-0">
+                                        <h5 class="card-title text-white mb-0">Touch & LCD Repair</h5>
+                                    </div>
+                                    <div class="card-footer bg-cblue border-0 rounded-0">
+                                        <small class="text-white cover"><i class="fa-solid fa-arrow-right"></i></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col item">
+                            <div class="card bg-dark text-white rounded-0 h-100">
+                                <img class="card-img rounded-0 h-100" src="images/Layer-619.jpg" alt="Card image">
+                                <div class="card-img-overlay mt-auto mb-0 p-0">
+                                    <div class="card-body bg-cblue rounded-0">
+                                        <h5 class="card-title text-white mb-0">Battery Replacement</h5>
+                                    </div>
+                                    <div class="card-footer bg-cblue border-0 rounded-0">
+                                        <small class="text-white cover"><i class="fa-solid fa-arrow-right"></i></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- service-box-bottom -->
+            <div class="container-fluid bg-cblue mb-5">
+                <div class="container service-bottom py-3">
+                    <div class="card rounded-0 border-0 bg-cblue">
+                        <div class="row g-0">
+                            <div class="col-md-2">
+                                <img src="https://via.placeholder.com/175x100/cccccc/" class="img-fluid rounded-0 w-100" alt="...">
+                            </div>
+                            <div class="col-md-7 col-sm-7">
+                                <div class="card-body px-0 px-md-3">
+                                    <h6 class="text-uppercase text-white"><span class="wline">&nbsp;&nbsp;Facilities we provide</span></h6>
+                                    <h3 class="text-white mb-0">Providing Solutions Of Every Kind</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-5 text-end">
+                                <div class="card-body px-0">
+                                    <a class="btn btn-lblue mt-3">See More Service</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recent Projects -->
+        <section class="project-area bg-cdblue text-center py-5 pb-md-1">
+            <h6 class="text-uppercase text-white"><span class="wline">&nbsp;&nbsp;We make Portfolio</span></h6>
+            <h2 class="text-white">Explore Recent Projects</h2>
+            <div class="container-fluid projects pt-4 py-md-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col item">
+                        <div class="card bg-dark text-white rounded-0 h-100">
+                            <img class="card-img rounded-0 h-100" src="images/Layer-621.jpg" alt="Card image">
+                            <div class="card-img-overlay mt-auto mb-4">
+                                <div class="card-body cover d-flex justify-content-between bg-white text-start rounded-0 px-4">
+                                    <div class="align-self-center w-75">
+                                        <p class="card-title cblue mb-0">Training</p>
+                                        <h5 class="card-title clight mb-0">Chip Level Training</h5>
+                                    </div>
+                                    <div class="align-self-center text-end w-25">
+                                        <i class="fa-solid fa-arrow-right cblue fs-5 fw-bold"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col item">
+                        <div class="card bg-dark text-white rounded-0 h-100">
+                            <img class="card-img rounded-0 h-100" src="images/Layer-622.jpg" alt="Card image">
+                            <div class="card-img-overlay mt-auto mb-4">
+                                <div class="card-body cover d-flex justify-content-between bg-white text-start rounded-0 px-4">
+                                    <div class="align-self-center w-75">
+                                        <p class="card-title cblue mb-0">Training</p>
+                                        <h5 class="card-title clight mb-0">Chip Level Training</h5>
+                                    </div>
+                                    <div class="align-self-center text-end w-25">
+                                        <i class="fa-solid fa-arrow-right cblue fs-5 fw-bold"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col item">
+                        <div class="card bg-dark text-white rounded-0 h-100">
+                            <img class="card-img rounded-0 h-100" src="images/Layer-6211.jpg" alt="Card image">
+                            <div class="card-img-overlay mt-auto mb-4">
+                                <div class="card-body cover d-flex justify-content-between bg-white text-start rounded-0 px-4">
+                                    <div class="align-self-center w-75">
+                                        <p class="card-title cblue mb-0">Training</p>
+                                        <h5 class="card-title clight mb-0">Chip Level Training</h5>
+                                    </div>
+                                    <div class="align-self-center text-end w-25">
+                                        <i class="fa-solid fa-arrow-right cblue fs-5 fw-bold"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-action border btn-lg fs-6 mt-5" href="#!" role="button">See More Portofolio</a>
+            </div>
+        </section>
+        <!-- Our Team -->
+        <section class="ourTeam team-area text-center pt-4 py-md-5">
+            <h6 class="text-uppercase cblue"><span class="bline">&nbsp;&nbsp;Our Member</span></h6>
+            <h2>Meet The Our Team</h2>
+            <div class="container my-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mb-5 g-4">
+                    <div class="col i">
+                        <div class="c shadow text-center">
+                            <div class="wrap">
+                                <img src="https://via.placeholder.com/250x300/0e5fb2" alt="#" width="250" height="300" class="img-fluid">
+                                <div class="infos text-start ms-4">
+                                    <p class="card-title cblue mb-0">Engineer</p>
+                                    <h5 class="card-text">Names</h5>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+                                <div class="socials">
+                                    <a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" title="#" class="linkedin ps-2"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col i">
+                        <div class="c shadow text-center">
+                            <div class="wrap">
+                                <img src="https://via.placeholder.com/250x300/0e5fb2" alt="#" width="250" height="300" class="img-fluid">
+                                <div class="infos text-start ms-4">
+                                    <p class="card-title cblue mb-0">Engineer</p>
+                                    <h5 class="card-text">Names</h5>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+                                <div class="socials">
+                                    <a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" title="#" class="linkedin ps-2"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col i">
+                        <div class="c shadow text-center">
+                            <div class="wrap">
+                                <img src="https://via.placeholder.com/250x300/0e5fb2" alt="#" width="250" height="300" class="img-fluid">
+                                <div class="infos text-start ms-4">
+                                    <p class="card-title cblue mb-0">Engineer</p>
+                                    <h5 class="card-text">Names</h5>
+                                </div>
+                            </div>
+                            <div class="more">
+                                <p>Ut sed consectetur ligula. Aenean id nibh accumsan, pre tium nulla in, lacinia aecenas mollis. Sed mauris at sollicitudin. Etiam maximus mauris vel leo mattis, non venenatis magna finibus vestibulum.</p>
+                                <div class="socials">
+                                    <a href="#" title="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" title="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" title="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#" title="#" class="linkedin ps-2"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 my-5 border-0 rounded-0 shadow">
+                    <div class="row g-0">
+                        <div class="col-12 col-md-9 h-100">
+                            <img src="images/h1-bg5.jpg" class="card-img cta-img" alt="...">
+                            <div class="card-img-overlay text-start rounded-0 pt-md-5 ps-md-5">
+                                <div class="d-flex align-items-center text-start">
+                                    <span class="cblue">
+                                        <img src="images/contact.png" alt="" class="img-fluid">
+                                    </span>
+                                    <span class="ms-3">
+                                        <h5 class="card-title mb-0">We’re ready to discover and unlock your potential.</h5>
+                                        <h4 class="card-title cblue mb-0">Call us Today! 658-000-3694</h4>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-3 rounded-0 video-clip">
+                            <video controls class="video w-100 h-100" id="videoclip" preload="metadata" poster="">
+                                <source src="https://www.youtube.com/watch?v=ScMzIvxBSi4" type="video/mp4"></source>
+                            </video>
+                            <a data-title="Play (k)" id="playbtn">
+                                <i class="fas fa-circle-play cblue bg-white rounded-circle fs-5"></i>
+                            </a>
+                            <!-- <video width="100%" controls 
+                                poster="https://via.placeholder.com/300x175/ececec">
+                                <source src="https://archive.org/download/ElephantsDream/ed_hd.ogv" type="video/ogg" />
+                                <a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"></a>
+                            </video> -->
+                            <!-- <img src="https://via.placeholder.com/300x175/ececec" class="img-fluid rounded-0 cta-img w-100" alt="..."> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Reviews -->
+        <section class="review-area text-center py-md-4">
+            <h6 class="text-uppercase cblue"><span class="bline">&nbsp;&nbsp;Testimonial</span></h6>
+            <h2>Read Customers Thoughts</h2>
+            <div class="container swiper px-2 my-5">
+                <div class="slide-content team mb-5">
+                    <div class="card-wrapper swiper-wrapper mt-3">
+                        <div class="card swiper-slide shadow-sm text-start p-4">
+                            <div class="mt-2">
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star-half-alt active-star"></span>
+                            </div>
+                            <div class="testimonial">Labore sed dolore magna aliquay enim ad minim veniam quis nostr ud exercitation ullamco laboris ni ut aliquip ex ea reprehen deritin voluptate.</div>
+                            <div class="d-flex flex-row profile pt-4 mt-auto"> 
+                                <img src="images/logo.png" alt="" class="rounded-circle me-3"> 
+                                <div class="d-flex flex-column pl-2"> 
+                                    <div class="name">Donald H. James</div> 
+                                    <p class="text-muted designation mb-0">Rental Customer</p> 
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="card swiper-slide shadow-sm active text-start p-4">
+                            <div class="mt-2">
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                            </div>
+                            <div class="testimonial">Labore sed dolore magna aliquay enim ad minim veniam quis nostr ud exercitation ullamco laboris ni ut aliquip ex ea reprehen deritin voluptate.</div>
+                            <div class="d-flex flex-row profile pt-4 mt-auto"> 
+                                <img src="images/logo.png" alt="" class="rounded-circle me-3"> 
+                                <div class="d-flex flex-column pl-2"> 
+                                    <div class="name">Donald H. James</div> 
+                                    <p class="text-muted designation mb-0">Rental Customer</p> 
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="card swiper-slide shadow-sm text-start p-4">
+                            <div class="mt-2">
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star active-star"></span>
+                                <span class="fas fa-star-half-alt active-star"></span>
+                            </div>
+                            <div class="testimonial">Labore sed dolore magna aliquay enim ad minim veniam quis nostr ud exercitation ullamco laboris ni ut aliquip ex ea reprehen deritin voluptate.</div>
+                            <div class="d-flex flex-row profile pt-4 mt-auto"> 
+                                <img src="images/logo.png" alt="" class="rounded-circle me-3"> 
+                                <div class="d-flex flex-column pl-2"> 
+                                    <div class="name">Donald H. James</div> 
+                                    <p class="text-muted designation mb-0">Rental Customer</p> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination px-5"></div>
+            </div>
+        </section>
+        <!-- Blog Posts -->
+        <section class="blog-area text-center py-md-4">
+            <h6 class="text-uppercase cblue"><span class="bline">&nbsp;&nbsp;FROM OUR BLOG</span></h6>
+            <h2>Here’s What’s Happening</h2>
+            <div class="container py-5">
+                <!-- Card deck -->
+                <div class="card-deck row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+                    <!-- Card -->
+                        <div class="card blog-post bg-white border-0">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top shadow-sm rounded-0" src="https://via.placeholder.com/100/1b1a1a" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body bg-white shadow text-start me-4">
+                                <p class="cblue s-text mb-2">03 JUN 2020    - MARKETING</p>
+                                <h5 class="card-title mb-2">Which construction tool is to choose?</h5>
+                                <p class="">Duis aute sit amet consectetur pisici elit, sed do eiusmod…</p>
+                                <a class="btn btn-blue border fs-6" href="#!" role="button">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+                    <!-- Card -->
+                        <div class="card blog-post bg-white border-0">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top shadow-sm rounded-0" src="https://via.placeholder.com/100/1b1a1a" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body bg-white shadow text-start me-4">
+                                <p class="cblue s-text mb-2">03 JUN 2020    - MARKETING</p>
+                                <h5 class="card-title mb-2">Which construction tool is to choose?</h5>
+                                <p class="">Duis aute sit amet consectetur pisici elit, sed do eiusmod…</p>
+                                <a class="btn btn-blue border fs-6" href="#!" role="button">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 mb-3">
+                    <!-- Card -->
+                        <div class="card blog-post bg-white border-0">
+                            <!--Card image-->
+                            <div class="view overlay">
+                                <img class="card-img-top shadow-sm rounded-0" src="https://via.placeholder.com/100/1b1a1a" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                            <!--Card content-->
+                            <div class="card-body bg-white shadow text-start me-4">
+                                <p class="cblue s-text mb-2">03 JUN 2020    - MARKETING</p>
+                                <h5 class="card-title mb-2">Which construction tool is to choose?</h5>
+                                <p class="">Duis aute sit amet consectetur pisici elit, sed do eiusmod…</p>
+                                <a class="btn btn-blue border fs-6" href="#!" role="button">Read More</a>
+                            </div>
+                        </div>
+                        <!-- Card -->
+                    </div>
+                </div>
+                <!-- Card deck -->
+            </div>
+        </section>
+        <!-- Brand Logo -->
+        <section class="brand-area">
+            <div class="container-fluid bg-light px-2">
+                <div class="d-flex brand justify-content-center flex-wrap flex-md-nowrap shadow w-100">
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/apple-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/samsong-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/mi-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/oppo-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/vivo-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/oneplus-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/realme-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/motorla-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                </div>
+                <div class="d-flex align-content-center sm-hide w-100">
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/nokia-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/honor-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/google-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/asus-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/panasonic-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/gionee-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/huawei-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/more-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Content End -->
+
+    <!-- footer Start-->
+    <footer>
+        <!-- Footer Main -->
+        <section class="footer bg-cdblue">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-start text-white py-sm-5">
+                    <div class="col">
+                        <h5 class="mt-md-3">&nbsp;</h5>
+                        <p class="text-white fs-6">There are many variations of pass Lorem Ipsum available.</p>
+                        <div class="d-flex align-items-center">
+                            <span class="cblue"><img src="images/icon.png" alt="" class="img-fluid" width="35px"></span>
+                            <span class="ms-3">Request Call Us<br/><span>(+099) 565 698 65</span></span>
+                        </div>
+                        <div class="col-auto nav-social my-4">
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 me-2"><i class="fa-brands fa-instagram"></i></span>
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 twitter"><i class="fa-brands fa-twitter"></i></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Our Service</h5>
+                        <ul class="list-unstyled">
+                            <li class="text-white fs-6 mb-1">iPhone Service Center</li>
+                            <li class="text-white fs-6 mb-1">Oneplus Service Center</li>
+                            <li class="text-white fs-6 mb-1">Mi Service Center</li>
+                            <li class="text-white fs-6 mb-1">Realme Service Center</li>
+                            <li class="text-white fs-6 mb-1">Nokia Service Center</li>
+                            <li class="text-white fs-6 mb-1">Samsung Service Center</li>
+                            <li class="text-white fs-6 mb-1">Google Pixel Repair</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Sucess Project</h5>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-0" id="email" placeholder="Enter Email*" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control rounded-0" id="comment" rows="3" placeholder="Your Comment"></textarea>
+                            </div>
+                            <a type="submit" class="btn text-white rounded-0 border-0 bg-cblue bg-opacity-10 fs-6 px-3 py-2">Send Message</a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Recent Post</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Bottom -->
+        <section class="border-bottom border-2 border-light py-2" style="background: #15283b;">
+            <div class="container text-white">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="fs-6 mb-0 mt-2">Copyright 2020. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-4 ms-md-auto">
+                        <ul class="nav justify-content-md-end">
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" aria-current="page" href="faqs.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" href="contact.html">Contact Us</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer End-->
+
+    <!-- Js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

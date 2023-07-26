@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- CSS -->
+    <script src="https://kit.fontawesome.com/de584875eb.js" crossorigin="anonymous"></script>
+    <link href="css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/regular.min.css" rel="stylesheet">
+    <link href="css/solid.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <!-- MAIN SITE STYLE SHEETS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <title>Home - DomainName</title>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100 justify-content-center justify-content-md-between">
+    <!-- Header Start -->
+    <header>
+        <!-- Top Header -->
+        <section class="top-head border-bottom d-none d-md-inline">
+            <div class="container">
+                <div class="d-flex justify-content-between py-2">
+                    <ul class="list-inline m-0">
+                        <li class="list-inline-item me-2 align-middle"><i class="fa-regular fa-clock me-2 cblue"></i>Open Hours: Mon - Sat - 9:00 - 18:00</li>
+                        <li class="list-inline-item cblue bancher align-middle">
+                            <i class="fa-sharp fa-solid fa-location-dot me-2 cblue"></i><a href="#">Get Directions</a></li>
+                    </ul>
+                    <ul class="list-inline ancher float-end m-0">
+                        <li class="list-inline-item"><a href="#">News & Media</a></li>
+                        <li class="list-inline-item ms-2"><a href="#">Careers</a></li>
+                        <li class="list-inline-item ms-2"><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Main Header -->
+        <section class="main-header border-top py-2">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-3 me-auto py-2">
+                        <a class="navbar-brand d-flex align-items-center" href="index.html">
+                            <img src="images/logo.png" alt="Logo" width="49" height="49">
+                            <span class="fs-2 ms-3">LOGO</span>
+                        </a>
+                    </div>
+                    <div class="col-auto info d-flex justify-content-md-end">
+                        <div class="d-flex align-items-center px-5">
+                            <span class="cblue me-3"><img src="images/email.png" alt="" class="img-fluid" width="35px"></span>
+                            <span><strong>Email:</strong><br/><span class="clight">demo@example.com</span></span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="cblue me-3"><img src="images/house.png" alt="" class="img-fluid" width="35px"></span>
+                            <span><strong>Location:</strong><br/><span class="clight">1256 floor new world.</span></span>
+                        </div>
+                    </div>
+                    <div class="col-auto nav-social d-md-none d-lg-inline d-flex justify-content-md-end ps-5">
+                        <span class="rounded-circle social_icons shadow-sm me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="rounded-circle social_icons shadow-sm me-2 twitter active"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="rounded-circle social_icons shadow-sm"><i class="fa-brands fa-pinterest-p"></i></span>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav Header -->
+            <div class="container sticky-top">
+
+            </div>
+        </section>
+        <!-- Nav Header -->
+        <section class="nav-header">
+            <nav class="navbar navbar-expand-lg py-lg-0">
+                <div class="container">
+                    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav nav-fill w-100">
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Our Service</a>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Solution</a>
+                            </li>
+                            <li class="nav-item dropdown py-2">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Menu 2
+                                </a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(a)</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(b)</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Menu 2(c)</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item py-2">
+                                <a class="nav-link text-uppercase" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item dropdown py-2">
+                                <a class="nav-link dropdown-toggle text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    My Account
+                                </a>
+                                <ul class="dropdown-menu rounded-0">
+                                    <li><a class="dropdown-item text-uppercase" href="#">My Account</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="login-register.html">Login</a></li>
+                                    <li><a class="dropdown-item text-uppercase" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                            <div class="nav-item search dropdown pt-3">
+                                <a onclick="myFunction()" class="dropbtn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                <div id="myDropdown" class="dropdown-content">
+                                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                                </div>
+                            </div>
+                            <li class="nav-item bg-white btn-blue bg-opacity-10 py-2">
+                                <a class="nav-link text-uppercase" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Request Service
+                                </a>
+                                <!-- <a type="button" class="text-decoration-none text-uppercase py-2" href="#">Request Service</a> -->
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-auto nav-social d-none d-md-block d-lg-none d-flex justify-content-md-end">
+                        <span class="rounded-circle social_icons bg-white shadow-sm me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                        <span class="rounded-circle social_icons bg-white shadow-sm me-2 twitter"><i class="fa-brands fa-twitter"></i></span>
+                        <span class="rounded-circle social_icons bg-white shadow-sm"><i class="fa-brands fa-pinterest-p"></i></span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <!-- Header End -->
+
+    <!-- Content Start -->
+    <main class="d-flex flex-column justify-content-start flex-grow-1 ">
+        <!-- Hero Start-->
+        <section class="page-hero text-center shadow d-flex" style="background-image: url(images/Layer-6151.jpg);">
+            <div class="container align-self-center">
+                <h1 class="heading fs-1 fw-bold text-uppercase">CONTACT US</h1>
+            </div>
+        </section>
+        <div class="container shadow-sm">
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb my-0 py-2">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Form Start -->
+        <section class="contact bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-sm rounded-0">
+                            <div class="card-header bg-cblue rounded-0 text-white text-uppercase"><i class="fa fa-envelope"></i> Contact us</div>
+                            <div class="card-body">
+                                <form action="webform.php" method="post" class="form needs-validation">
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-md">
+                                            <label for="name">Name</label>
+                                            <input type="text" class="form-control rounded-0" id="name" placeholder="Enter name" required>
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="email">Eamil:</label>
+                                            <input type="email" class="form-control rounded-0" id="email" placeholder="name@example.com" required>
+                                        </div>
+                                    </div>
+                                    <div class="row g-2 mb-2">
+                                        <div class="col-md">
+                                            <label for="phone">Phone Number:</label>
+                                            <input type="phone" class="form-control rounded-0" id="phone" placeholder="(+099) 565 698 65" required>
+                                        </div>
+                                        <div class="col-md">
+                                            <label for="service">Service Type</label>
+                                            <select class="form-select rounded-0" id="service">
+                                                <option value="1">iPhone Service</option>
+                                                <option value="2">Oneplus Service</option>
+                                                <option value="3">Mi Service</option>
+                                                <option value="3">Realme Service</option>
+                                                <option value="3">Nokia Service</option>
+                                                <option value="3">Samsung Service</option>
+                                                <option value="3">Google Pixel Repair</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message">Message</label>
+                                        <textarea class="form-control rounded-0" id="message" rows="6"></textarea>
+                                    </div>
+                                    <div class="mx-auto">
+                                    <button type="submit" class="btn btn-blue mt-3 px-5 text-right">Submit</button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <div class="card shadow-sm rounded-0 bg-light mb-3">
+                            <div class="card-header bg-cdblue rounded-0 text-white text-uppercase"><i class="fa fa-info"></i> Information</div>
+                            <div class="card-body">
+                                <p><i class="fa fa-location-dot cblue me-3"></i>3 rue des Champs Elysées, 75008 NY, USA</p>
+                                <p><i class="fa fa-envelope cblue me-3"></i>email@example.com</p>
+                                <p><i class="fa fa-phone cblue me-3"></i>(+099) 565 698 65</p>
+            
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Brand Logo -->
+        <section class="brand-area">
+            <div class="container-fluid bg-light px-2">
+                <div class="d-flex brand justify-content-center flex-wrap flex-md-nowrap shadow w-100">
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/apple-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/samsong-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/mi-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/oppo-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/vivo-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/oneplus-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/realme-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/motorla-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                </div>
+                <div class="d-flex align-content-center sm-hide w-100">
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/nokia-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/honor-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/google-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/asus-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/panasonic-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/gionee-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/huawei-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                    <div class="order-3 p-2 border border-3 border-light bd-highlight zoom-brand">
+                        <img src="images/more-logo.jpg" alt="" class="img-fluid" width="139px " height="auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Content End -->
+
+    <!-- footer Start-->
+    <footer>
+        <!-- Footer Main -->
+        <section class="footer bg-cdblue">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 align-items-start text-white py-sm-5">
+                    <div class="col">
+                        <h5 class="mt-md-3">&nbsp;</h5>
+                        <p class="text-white fs-6">There are many variations of pass Lorem Ipsum available.</p>
+                        <div class="d-flex align-items-center">
+                            <span class="cblue"><img src="images/icon.png" alt="" class="img-fluid" width="35px"></span>
+                            <span class="ms-3">Request Call Us<br/><span>(+099) 565 698 65</span></span>
+                        </div>
+                        <div class="col-auto nav-social my-4">
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 me-2"><i class="fa-brands fa-facebook-f"></i></span>
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 me-2"><i class="fa-brands fa-instagram"></i></span>
+                            <span class="rounded-0 social_icons text-white bg-white bg-opacity-10 twitter"><i class="fa-brands fa-twitter"></i></span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Our Service</h5>
+                        <ul class="list-unstyled">
+                            <li class="text-white fs-6 mb-1">iPhone Service Center</li>
+                            <li class="text-white fs-6 mb-1">Oneplus Service Center</li>
+                            <li class="text-white fs-6 mb-1">Mi Service Center</li>
+                            <li class="text-white fs-6 mb-1">Realme Service Center</li>
+                            <li class="text-white fs-6 mb-1">Nokia Service Center</li>
+                            <li class="text-white fs-6 mb-1">Samsung Service Center</li>
+                            <li class="text-white fs-6 mb-1">Google Pixel Repair</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Sucess Project</h5>
+                        <form>
+                            <div class="mb-3">
+                                <input type="email" class="form-control rounded-0" id="email" placeholder="Enter Email*" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control rounded-0" id="comment" rows="3" placeholder="Your Comment"></textarea>
+                            </div>
+                            <a type="submit" class="btn text-white rounded-0 border-0 bg-cblue bg-opacity-10 fs-6 px-3 py-2">Send Message</a>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <h5 class="mb-3">Recent Post</h5>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="cblue"><img src="https://via.placeholder.com/70/cccccc" alt="" class="img-fluid" width="70px"></span>
+                            <span class="ms-3 lh-1">Which construction to choose?<br/><span class="clight s-text fw-normal">October 23, 2021</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer Bottom -->
+        <section class="border-bottom border-2 border-light py-2" style="background: #15283b;">
+            <div class="container text-white">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="fs-6 mb-0 mt-2">Copyright 2020. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-md-4 ms-md-auto">
+                        <ul class="nav justify-content-md-end">
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" aria-current="page" href="faqs.html">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" href="about.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link text-white fs-6" href="contact.html">Contact Us</a>
+                            </li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer End-->
+
+    <!-- Js -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

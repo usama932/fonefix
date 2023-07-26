@@ -1,0 +1,25 @@
+[25-Oct-2022 10:08:01 UTC] PHP Fatal error:  During class fetch: Uncaught ParseError: syntax error, unexpected '}', expecting ';' in /home/cqc4qh0i6x1u/public_html/app/Traits/ApiResponser.php:50
+Stack trace:
+#0 /home/cqc4qh0i6x1u/public_html/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home/cqc4qh0i6...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Traits\\ApiR...')
+#2 /home/cqc4qh0i6x1u/public_html/app/Http/Controllers/ApiController.php(8): spl_autoload_call('App\\Traits\\ApiR...')
+#3 /home/cqc4qh0i6x1u/public_html/vendor/composer/ClassLoader.php(571): include('/home/cqc4qh0i6...')
+#4 /home/cqc4qh0i6x1u/public_html/vendor/composer/ClassLoader.php(428): Composer\Autoload\includeFile('/home/cqc4qh0i6...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Http\\Contro...')
+#6 /home/cqc4qh0i6x1u/public_html/app/Http/Controllers/Api/EnquiryController.php(21): spl_autoload_call('App\\Http\\Contro...')
+#7 /home/cqc4qh0i6x1u/public_html/vendor/composer/ClassLoader.php(571): include('/home in /home/cqc4qh0i6x1u/public_html/app/Http/Controllers/ApiController.php on line 8
+[23-May-2023 12:41:08 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:41:54 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:42:55 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:43:04 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:43:15 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:43:47 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:44:19 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:44:44 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:45:16 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:45:21 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:45:42 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:46:01 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:48:32 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:49:51 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
+[23-May-2023 12:50:10 UTC] PHP Fatal error:  Trait 'Spatie\Permission\Traits\HasRoles' not found in /home/cqc4qh0i6x1u/public_html/app/Models/User.php on line 11
