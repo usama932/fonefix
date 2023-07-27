@@ -31,7 +31,10 @@ class AdminController extends Controller
         }])->first();
 
         $title = 'Admin Dashboard';
-        $statuses = Status::where("user_id",auth()->user()->id)->get();
+        $statuses =  Status::whereHas('used', function ($query) {
+            $query->where('used', '1');
+           })->orwhere('user_id',Auth::id())->orderBy('name', 'asc')->latest()->get();
+
         return view('admin.dashboard.index',compact('title','clients','works','informations','statuses'));
     }
 

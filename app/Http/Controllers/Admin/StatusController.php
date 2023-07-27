@@ -62,7 +62,7 @@ class StatusController extends Controller
         if(empty($request->input('search.value'))){
             if ($id){
                 $users = Status::where('shared','1')
-                    ->orwhere('user_id',$id)
+                    ->orWhere('user_id',$id)
                     ->offset($start)
                     ->limit($limit)
                     ->orderBy($order,$dir)
@@ -92,7 +92,7 @@ class StatusController extends Controller
                 ])
 
                 ->where('shared',1)
-                ->orwhere('user_id',$id)
+                ->orWhere('user_id',$id)
                     ->orWhere([
                         ['created_at', 'like', "%{$search}%"],
                     ])
@@ -268,15 +268,16 @@ class StatusController extends Controller
 	    $user->whatsapp_template = $input['whatsapp_template'];
 	    $user->email_body = $input['email_body'];
         $user->shared = $shared;
-        if(auth()->user()->role = 2){
-            $user->shop_ids = $array;
-        }
+
 
 	    $user->sort_order = $input['sort_order'];
-        if (auth()->user()->id == 1){
+        if (auth()->user()->role == 1){
             $user->user_id =  auth()->user()->id;
         }
-        if (auth()->user()->id == 3){
+        if (auth()->user()->role == 2){
+            $user->user_id =  auth()->user()->id;
+        }
+        if (auth()->user()->role == 3){
             $user->user_id =  Auth::user()->parent_id;
         }
         $res = array_key_exists('complete', $input);

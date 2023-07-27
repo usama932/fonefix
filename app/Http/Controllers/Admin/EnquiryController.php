@@ -388,6 +388,14 @@ class EnquiryController extends Controller
 
                             $sms_setting = $sms->smsSetting;
                         }
+                        else{
+
+                            $sms = User::where('id',1)->with('smsSetting', function($q) use ($id){
+                                $q->where('template_id', 'LIKE', '%'. $id .'%');
+                                })->first();
+                                $sms_setting = $sms->smsSetting;
+
+                        }
                         if(!$sms_setting) {
                             $sms = User::where('id', 1)->with('smsSetting', function($q) use ($id){
                                 $q->where('template_id', 'LIKE', '%'. $id .'%');

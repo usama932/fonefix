@@ -42,7 +42,7 @@
          )
          ->count();
          $jobs = \App\Models\Job::where("user_id",Auth::user()->id)->count();
-         $statuses = \App\Models\Status::where("user_id",Auth::user()->id)->get();
+
 
          $accepted = \App\Models\Job::where([["user_id",Auth::id()],["status_id",1]])->count();
          $progressing = \App\Models\Job::where([["user_id",Auth::id()],["status_id",2]])->count();
@@ -156,11 +156,16 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                         </span>
-                                        @if($status->jobs)
-                                        <a href="#" class="text-info font-weight-bold font-size-h6 mt-2" style="color: {{$status->color}} !important;">{{$status->name}}
-                                        ({{$status->jobs->count() ?? 0}})</a>
 
-                                        @endif
+                                        <a href="#" class="text-info font-weight-bold font-size-h6 mt-2" style="color: {{$status->color ?? ''}} !important;">{{$status->name}}
+                                            @if($status->jobs)
+                                                ({{$status->jobs->count() ?? 0}})
+                                            @else
+                                               <span class="text-danger"> No Jobs </span>
+                                            @endif
+                                        </a>
+
+
                                     </div>
                                 @endif
                             @endif

@@ -413,11 +413,13 @@ class ClientController extends Controller
 
 
                 $sms_template = SmsTempalate::where('type','2')->first();
+
                 if(!empty($sms_template)){
                     $used = TemplateUse::where('user_id',auth()->user()->id)
                                         ->where('template_id',$sms_template->id)
                                         ->where('used',1)
                                         ->first();
+
                     $message = $sms_template->description;
                     $message = str_replace("{customer_name}",$input['name'],$message);
                     // $message = str_replace("{enquired_products}",$request->device0,$message);
@@ -429,6 +431,14 @@ class ClientController extends Controller
                                 $q->where('template_id', 'LIKE', '%'. $id .'%');
                                 })->first();
                                 $sms_setting = $sms->smsSetting;
+                    }
+                    else{
+
+                        $sms = User::where('id',1)->with('smsSetting', function($q) use ($id){
+                            $q->where('template_id', 'LIKE', '%'. $id .'%');
+                            })->first();
+                            $sms_setting = $sms->smsSetting;
+
                     }
 
 
@@ -626,6 +636,132 @@ class ClientController extends Controller
                 $shop_user->save();
             }
         }
+        $sms_template = SmsTempalate::where('type','2')->first();
+        if(!empty($sms_template)){
+            $used = TemplateUse::where('user_id',auth()->user()->id)
+                                ->where('template_id',$sms_template->id)
+                                ->where('used',1)
+                                ->first();
+            $message = $sms_template->description;
+            $message = str_replace("{customer_name}",$input['name'],$message);
+            // $message = str_replace("{enquired_products}",$request->device0,$message);
+
+            $id = $sms_template->id;
+            $sms_setting ='';
+            if(!empty($used)){
+                $sms = User::where('id',auth()->user()->id)->with('smsSetting', function($q) use ($id){
+                        $q->where('template_id', 'LIKE', '%'. $id .'%');
+                        })->first();
+                        $sms_setting = $sms->smsSetting;
+            }
+            else{
+
+                $sms = User::where('id',1)->with('smsSetting', function($q) use ($id){
+                    $q->where('template_id', 'LIKE', '%'. $id .'%');
+                    })->first();
+                    $sms_setting = $sms->smsSetting;
+
+            }
+
+
+
+            if(!empty($sms_setting)) {
+                $sms = User::where('id', 1)->with('smsSetting', function($q) use ($id){
+                    $q->where('template_id', 'LIKE', '%'. $id .'%');
+                })->first();
+                $sms_setting = $sms->smsSetting;
+            }
+
+
+
+
+            if ($sms_setting) {
+
+                if ($sms_setting->type == 2){
+
+                    $data = (object) [
+                        'phone' => $input['phone'],
+                        'account_sid' => $sms_setting->twilio_account_sid,
+                        'auth_token' => $sms_setting->twilio_auth_token,
+                        'twilio_number' =>  $sms_setting->twilio_number,
+                        'msg' =>  $message,
+                    ];
+                    $this->sendThroughTwilio($data);
+                }elseif ($sms_setting->type == 1){
+
+                    $data = (object) [
+                        'apikey' => $sms_setting->pearlsms_api_key,
+                        'sender' => $sms_setting->pearlsms_sender,
+                        'header' => $sms_setting->pearlsms_header,
+                        'footer' => $sms_setting->pearlsms_footer,
+                        'username' => $sms_setting->pearlsms_username,
+                        'phone' =>  $input['phone'],
+                        'msg' =>  $message,
+                    ];
+                    $response =  $this->sendThroughPearl($data);
+                    $response = json_decode($response);
+
+                }elseif ($sms_setting->type == 3){
+
+                    $data = (object) [
+
+                        'apikey' => $sms_setting->bulksms_apikey,
+                        'sender' => $sms_setting->bulksms_sendername,
+                        'username' => $sms_setting->bulksms_username,
+                        'sms_type' => $sms_template->sms_type,
+                        'sms_peid' => $sms_template->sms_peid,
+                        'sms_template_id' => $sms_template->sms_template_id,
+                        'phone' =>  $input['phone'],
+                        'msg' =>  $message,
+                    ];
+                    $response =  $this->sendThroughBulk($data);
+                    $response = json_decode($response);
+
+                }
+            }
+        }
+
+        // $whatsapp_template = WhatsappTemplate::where('type','2')->where('shared',1)->first();
+        // if(!empty($whatsapp_template)){
+        //     $message = $whatsapp_template->description;
+        //     $message = str_replace("{customer_name}",$input['name'],$message);
+        //     $id = $whatsapp_template->id;
+
+        //     $whatsapp =  User::where('id',auth()->user()->id)->with('whatsappSetting', function($q) use ($id){
+        //                     $q->where('template_id', 'LIKE', '%'. $id .'%');
+        //                 })->first();
+        //     $whatsapp_setting = $whatsapp->whatsappSetting;
+
+        //     if (!$whatsapp_setting){
+        //         $whatsapp =User::where('id',1)->with('whatsappSetting', function($q) use ($id){
+        //             $q->where('template_id', 'LIKE', '%'. $id .'%');
+        //         })->first();
+        //         $whatsapp_setting = $whatsapp->whatsappSetting;
+        //     }
+
+        //     if ($whatsapp_setting){
+
+        //         if ($whatsapp_setting->type == 1){
+        //             $data = (object) [
+        //                 'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
+        //                 'to' => str_replace("+","", $input['contact_number']),
+        //                 'msg' =>  $message,
+        //             ];
+        //             $this->sendThroughCloud($data);
+        //             }elseif ($whatsapp_setting->type == 2){
+
+        //                 $data = (object) [
+        //                     'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
+        //                     'to' => str_replace("+","", $input['contact_number']),
+        //                     'msg' =>  $message,
+        //                 ];
+        //                 $this->sendThroughVonage($data);
+
+
+        //         }
+
+        // }
+
 	    Session::flash('success_message', 'Great! Customer has been saved successfully!');
 
 	    return redirect()->back();
@@ -1147,7 +1283,7 @@ class ClientController extends Controller
         ));
 
         $response = curl_exec($curl);
-
+        dd($response);
         curl_close($curl);
         return $response;
     }

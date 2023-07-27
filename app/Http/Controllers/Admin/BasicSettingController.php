@@ -39,7 +39,9 @@ class BasicSettingController extends Controller
             $settings = BasicSetting::where('user_id', Auth::user()->parent_id)->first();
             $id = Auth::user()->parent_id;
         }
-        $statuses = Status::where('user_id',auth()->user()->id)->latest()->get();
+        $statuses =  $statuses = Status::whereHas('used', function ($query) {
+            $query->where('used', '1');
+           })->orwhere('user_id',Auth::id())->orderBy('name', 'asc')->latest()->get();
 
         $shop = User::findOrFail($id);
         return view('admin.settings.basic', ['title' => 'Basic Setting','settings'=>$settings,'timezones' => $timezones,'shop'=>$shop,'statuses'=>$statuses,'currencies'=>$this->currency()]);

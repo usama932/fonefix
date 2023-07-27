@@ -1450,7 +1450,9 @@ class JobController extends Controller
             $devices = Device::where([["user_id",Auth::id()]])->orderBy('name', 'asc')->pluck('name','id')->toArray();
             $couriers = Courier::where([["user_id",Auth::id()]])->orderBy('name', 'asc')->pluck('name','id')->toArray();
             $idCards = IdCard::where([["user_id",Auth::id()]])->orderBy('name', 'asc')->pluck('name','id')->toArray();
-            $statuses = Status::where([["user_id",Auth::id()]])->orWhere('shared',1)->orderBy('name', 'asc')->pluck('name','id')->toArray();
+            $statuses = Status::whereHas('used', function ($query) {
+                $query->where('used', '1');
+               })->orwhere('user_id',Auth::id())->orderBy('name', 'asc')->pluck('name','id')->toArray();
         }elseif (Auth::user()->role == 3){
             $id = Auth::user()->parent_id;
             $users = User::where([["is_admin",0]])
