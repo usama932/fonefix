@@ -626,7 +626,7 @@ class JobController extends Controller
     public function store(Request $request)
     {
 
-        //dd($request->all());
+      //  dd($request->all());
 
 	    $this->validate($request, [
 
@@ -798,7 +798,7 @@ class JobController extends Controller
             }
         }
         $url = route('job-pdf-public',[$user->id,$user->shop->name]);
-
+        
         $status = $user->stat->name;
         $msg = "Your Job $status <br> <a href='$url'>Show Pdf</a>";
 
@@ -1238,7 +1238,7 @@ class JobController extends Controller
         return $response;
     }
     public function sendThroughMailchimp($data){
-        dd($data);
+
         $mailchimp = new \MailchimpTransactional\ApiClient();
         $mailchimp->setApiKey($data->apikey);
         $response = $mailchimp->messages->send(

@@ -55,11 +55,22 @@ class FrontendController extends Controller
         $pdf = PDF::setOptions(['isHTML5ParserEnabled' => true, 'isRemoteEnabled' => true,'defaultFont' => 'sans-serif']);
         $pdf->getDomPDF()->setHttpContext($contxt);
         //#################################################################################
-//        return view("admin.jobs.pdf",compact('user','logo','settings','path'));
-        $pdf =  $pdf->loadView('admin.jobs.pdf', compact('user','logo','settings','path'));
-        return $pdf->download("$user->job_sheet_number.pdf");
-    }
+          $pdf =  $pdf->loadView('admin.jobs.pdf', compact('user','logo','settings','path'));
+         //return $pdf->download("$user->job_sheet_number.pdf");
+        return view("admin.jobs.pdf",compact('user','logo','settings','path'));
 
+    }
+    public function download()
+    {
+        //PDF file is stored under project/public/download/info.pdf
+        $file= public_path(). "/job.pdf";
+
+        $headers = array(
+            'Content-Type: application/pdf',
+        );
+
+        return Response::download($file, 'job-sample.pdf    ', $headers);
+    }
     public function index(Request $request)
     {
         $title = 'Home - FoneFix';
