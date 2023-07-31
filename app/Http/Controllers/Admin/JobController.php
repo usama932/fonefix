@@ -798,7 +798,7 @@ class JobController extends Controller
             }
         }
         $url = route('job-pdf-public',[$user->id,$user->shop->name]);
-        
+
         $status = $user->stat->name;
         $msg = "Your Job $status <br> <a href='$url'>Show Pdf</a>";
 
@@ -1359,6 +1359,7 @@ class JobController extends Controller
     }
     public function show($id)
     {
+
 	    $user = Job::find($id);
 	    return view('admin.jobs.single', ['title' => 'Job detail', 'user' => $user]);
     }
@@ -1609,6 +1610,7 @@ class JobController extends Controller
 
         $device  = Device::findOrFail($request->device_model);
         $pre_repair = explode('|',$device->pre_repair);
+
         foreach ($pre_repair as $index => $item) {
             $iteration = $index + 1;
             if(array_key_exists("pre_repair$iteration",$input)){
