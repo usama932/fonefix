@@ -1283,7 +1283,7 @@ class ClientController extends Controller
         ));
 
         $response = curl_exec($curl);
-        dd($response);
+        //dd($response);
         curl_close($curl);
         return $response;
     }
