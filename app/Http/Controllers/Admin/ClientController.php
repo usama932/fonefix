@@ -500,59 +500,59 @@ class ClientController extends Controller
                     }
                 }
 
-                // $whatsapp_template = WhatsappTemplate::where('type','2')->where('shared',1)->first();
-                // if(!empty($whatsapp_template)){
-                //     $message = $whatsapp_template->description;
-                //     $message = str_replace("{customer_name}",$input['name'],$message);
-                //     $id = $whatsapp_template->id;
+                $whatsapp_template = WhatsappTemplate::where('type','2')->first();
 
-                //     $whatsapp =  User::where('id',auth()->user()->id)->with('whatsappSetting', function($q) use ($id){
-                //                     $q->where('template_id', 'LIKE', '%'. $id .'%');
-                //                 })->first();
-                //     $whatsapp_setting = $whatsapp->whatsappSetting;
+                if(!empty($whatsapp_template)){
 
-                //     if (!$whatsapp_setting){
-                //         $whatsapp =User::where('id',1)->with('whatsappSetting', function($q) use ($id){
-                //             $q->where('template_id', 'LIKE', '%'. $id .'%');
-                //         })->first();
-                //         $whatsapp_setting = $whatsapp->whatsappSetting;
-                //     }
+                    $message = $whatsapp_template->description;
+                    $message = str_replace("{customer_name}",$input['name'],$message);
+                    $id = $whatsapp_template->id;
 
-                //     if ($whatsapp_setting){
+                    $whatsapp =  User::where('id',auth()->user()->id)->with('whatsappSetting', function($q) use ($id){
+                                    $q->where('template_id', 'LIKE', '%'. $id .'%');
+                                })->first();
+                    $whatsapp_setting = $whatsapp->whatsappSetting;
 
-                //         if ($whatsapp_setting->type == 1){
-                //             $data = (object) [
-                //                 'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
-                //                 'to' => str_replace("+","", $input['contact_number']),
-                //                 'msg' =>  $message,
-                //             ];
-                //             $this->sendThroughCloud($data);
-                //             }elseif ($whatsapp_setting->type == 2){
+                    if (!$whatsapp_setting){
+                        $whatsapp =User::where('id',1)->with('whatsappSetting', function($q) use ($id){
+                            $q->where('template_id', 'LIKE', '%'. $id .'%');
+                        })->first();
+                        $whatsapp_setting = $whatsapp->whatsappSetting;
+                    }
 
-                //                 $data = (object) [
-                //                     'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
-                //                     'to' => str_replace("+","", $input['contact_number']),
-                //                     'msg' =>  $message,
-                //                 ];
-                //                 $this->sendThroughVonage($data);
+                    if ($whatsapp_setting){
+
+                        if ($whatsapp_setting->type == 1){
+                            $data = (object) [
+                                'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
+                                'to' => str_replace("+","", $input['phone']),
+                                'msg' =>  $message,
+                            ];
+                            $this->sendThroughCloud($data);
+                            }elseif ($whatsapp_setting->type == 2){
+
+                                $data = (object) [
+                                    'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
+                                    'to' => str_replace("+","", $input['phone']),
+                                    'msg' =>  $message,
+                                ];
+                                $this->sendThroughVonage($data);
 
 
-                //         }
+                        }
 
-                // }
-
+                }
 
             Session::flash('success_message', 'Great! Client has been saved successfully!');
             return redirect()->back();
 
         }
-        catch(Exception $e){
+    }catch(Exception $e){
             Session::flash('error_message', $e->getMessage());
             return redirect()->back();
         }
 
     }
-
     public function phoneCheck(Request $request){
         if (Auth::user()->role == 2) {
             $id = Auth::user()->id;
@@ -721,52 +721,52 @@ class ClientController extends Controller
             }
         }
 
-        // $whatsapp_template = WhatsappTemplate::where('type','2')->where('shared',1)->first();
-        // if(!empty($whatsapp_template)){
-        //     $message = $whatsapp_template->description;
-        //     $message = str_replace("{customer_name}",$input['name'],$message);
-        //     $id = $whatsapp_template->id;
+        $whatsapp_template = WhatsappTemplate::where('type','2')->first();
+        if(!empty($whatsapp_template)){
+            $message = $whatsapp_template->description;
+            $message = str_replace("{customer_name}",$input['name'],$message);
+            $id = $whatsapp_template->id;
 
-        //     $whatsapp =  User::where('id',auth()->user()->id)->with('whatsappSetting', function($q) use ($id){
-        //                     $q->where('template_id', 'LIKE', '%'. $id .'%');
-        //                 })->first();
-        //     $whatsapp_setting = $whatsapp->whatsappSetting;
+            $whatsapp =  User::where('id',auth()->user()->id)->with('whatsappSetting', function($q) use ($id){
+                            $q->where('template_id', 'LIKE', '%'. $id .'%');
+                        })->first();
+            $whatsapp_setting = $whatsapp->whatsappSetting;
 
-        //     if (!$whatsapp_setting){
-        //         $whatsapp =User::where('id',1)->with('whatsappSetting', function($q) use ($id){
-        //             $q->where('template_id', 'LIKE', '%'. $id .'%');
-        //         })->first();
-        //         $whatsapp_setting = $whatsapp->whatsappSetting;
-        //     }
+            if (!$whatsapp_setting){
+                $whatsapp =User::where('id',1)->with('whatsappSetting', function($q) use ($id){
+                    $q->where('template_id', 'LIKE', '%'. $id .'%');
+                })->first();
+                $whatsapp_setting = $whatsapp->whatsappSetting;
+            }
 
-        //     if ($whatsapp_setting){
+            if ($whatsapp_setting){
 
-        //         if ($whatsapp_setting->type == 1){
-        //             $data = (object) [
-        //                 'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
-        //                 'to' => str_replace("+","", $input['contact_number']),
-        //                 'msg' =>  $message,
-        //             ];
-        //             $this->sendThroughCloud($data);
-        //             }elseif ($whatsapp_setting->type == 2){
+                if ($whatsapp_setting->type == 1){
+                    $data = (object) [
+                        'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
+                        'to' => str_replace("+","", $input['phone']),
+                        'msg' =>  $message,
+                    ];
+                    $this->sendThroughCloud($data);
+                    }elseif ($whatsapp_setting->type == 2){
 
-        //                 $data = (object) [
-        //                     'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
-        //                     'to' => str_replace("+","", $input['contact_number']),
-        //                     'msg' =>  $message,
-        //                 ];
-        //                 $this->sendThroughVonage($data);
+                        $data = (object) [
+                            'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
+                            'to' => str_replace("+","", $input['phone']),
+                            'msg' =>  $message,
+                        ];
+                        $this->sendThroughVonage($data);
 
 
-        //         }
+                }
 
-        // }
+        }
 
 	    Session::flash('success_message', 'Great! Customer has been saved successfully!');
 
 	    return redirect()->back();
     }
-
+    }
     /**
      * Display the specified resource.
      *
@@ -1079,6 +1079,7 @@ class ClientController extends Controller
 
 	}
     public function sendThroughCloud($data){
+
         $api_key = $data->api_key;
         $to = $data->to;
         $msg = $data->msg;
@@ -1097,11 +1098,12 @@ class ClientController extends Controller
         ));
 
         $response = curl_exec($curl);
-
+       //dd($response);
         curl_close($curl);
     }
 
     public function sendThroughVonage($data){
+       // dd("asa");
         $from = $data->from;
         $to = $data->to;
         $msg = $data->msg;
@@ -1136,6 +1138,7 @@ class ClientController extends Controller
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
         $resp = curl_exec($curl);
+       // dd($resp);
         curl_close($curl);
     }
     public function sendThroughTwilio($data){
@@ -1283,7 +1286,7 @@ class ClientController extends Controller
         ));
 
         $response = curl_exec($curl);
-        //dd($response);
+       //dd($response);
         curl_close($curl);
         return $response;
     }
