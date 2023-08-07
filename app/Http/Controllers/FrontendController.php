@@ -30,35 +30,40 @@ class FrontendController extends Controller
     public function pdf($id,$shop_id)
     {
         $user = Job::find($id);
-        $img = $user->shop->image;
-        $logo = public_path("/uploads/$img");
-//        $logo = "$url/public/uploads/".$img;
-//        'debugPng' => true,
 
-        $settings = JobSetting::where('user_id', $user->user_id)->first();
-        $basic = BasicSetting::where('user_id', $user->user_id)->first();
-        if ($basic){
-            $logo = url("/uploads/$basic->image");
+        if($user != null)
+        {
+            $img = $user->shop->image ;
+            $logo = public_path("/uploads/$img");
+    //        $logo = "$url/public/uploads/".$img;
+    //        'debugPng' => true,
+
+            $settings = JobSetting::where('user_id', $user->user_id)->first();
+            $basic = BasicSetting::where('user_id', $user->user_id)->first();
+            if ($basic){
+                $logo = url("/uploads/$basic->image");
+            }
+            $path = url("uploads/");
+            $pdf = app('dompdf.wrapper');
+
+            //############ Permitir ver imagenes si falla ################################
+            $contxt = stream_context_create([
+                'ssl' => [
+                    'verify_peer' => FALSE,
+                    'verify_peer_name' => FALSE,
+                    'allow_self_signed' => TRUE,
+                ]
+            ]);
+
+            $pdf = PDF::setOptions(['isHTML5ParserEnabled' => true, 'isRemoteEnabled' => true,'defaultFont' => 'sans-serif']);
+            $pdf->getDomPDF()->setHttpContext($contxt);
+            //#################################################################################
+            $pdf =  $pdf->loadView('admin.jobs.pdf', compact('user','logo','settings','path'));
+            //return $pdf->download("$user->job_sheet_number.pdf");
+            return view("admin.jobs.pdf",compact('user','logo','settings','path'));
         }
-        $path = url("uploads/");
-        $pdf = app('dompdf.wrapper');
 
-        //############ Permitir ver imagenes si falla ################################
-        $contxt = stream_context_create([
-            'ssl' => [
-                'verify_peer' => FALSE,
-                'verify_peer_name' => FALSE,
-                'allow_self_signed' => TRUE,
-            ]
-        ]);
-
-        $pdf = PDF::setOptions(['isHTML5ParserEnabled' => true, 'isRemoteEnabled' => true,'defaultFont' => 'sans-serif']);
-        $pdf->getDomPDF()->setHttpContext($contxt);
-        //#################################################################################
-          $pdf =  $pdf->loadView('admin.jobs.pdf', compact('user','logo','settings','path'));
-         //return $pdf->download("$user->job_sheet_number.pdf");
-        return view("admin.jobs.pdf",compact('user','logo','settings','path'));
-
+        return "<h1>Shop Does not Exist </h1>";
     }
     public function download()
     {

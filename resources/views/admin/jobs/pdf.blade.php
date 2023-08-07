@@ -7,6 +7,13 @@
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700"/>
     <!--end::Fonts-->
+    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/custom/prismjs/prismjs.bundle.css') }}" rel="stylesheet" type="text/css" />
+    {{--  <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />  --}}
+
     <style>
         table {
             width: 100%;
@@ -52,10 +59,8 @@
         <th rowspan="3">
             Date:
             <span style="font-weight: 100">
-                @php
-                $timezone =  App\Models\BasicSetting::where('user_id',auth()->user()->id)->first();
-            @endphp
-									{{$user->created_at->timezone($timezone->timezone)->toDayDateTimeString()}}
+
+									{{$user->created_at->toDayDateTimeString()}}
 								</span>
         </th>
     </tr>
@@ -191,11 +196,11 @@
         </td>
         <td>
             @foreach($user->preRepairs as $repair)
-                <div class="col-xs-4">
-                    <i class="fas @if($repair->value == 1) fa-check-square text-success @elseif($repair->value == 2) fa-window-close text-danger @else fa-square  @endif fa-lg"></i>
-                    {{$repair->name}}
-                    <br>
-                </div>
+            <div class="col-xs-4">
+                <i class="fas @if($repair->value == "Yes") fa-check-square text-success @elseif($repair->value == "N/A" || $repair->value == "No") fa-window-close text-danger @else fa-square  @endif fa-lg"></i>
+                {{$repair->name}}
+                <br>
+            </div>
             @endforeach
 
         </td>

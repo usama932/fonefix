@@ -798,7 +798,7 @@ class JobController extends Controller
             }
         }
         $url = route('job-pdf-public',[$user->id,$user->shop->name]);
-
+        dd($url);
         $status = $user->stat->name;
         $msg = "Your Job $status <br> <a href='$url'>Show Pdf</a>";
 
