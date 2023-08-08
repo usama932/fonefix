@@ -744,7 +744,7 @@ class ClientController extends Controller
                 if ($whatsapp_setting->type == 1){
                     $data = (object) [
                         'api_key' => str_replace("+","",$whatsapp_setting->cloudwhatsapp_api_key),
-                        'to' => str_replace("+","", $input['phone']),
+                        'to' => str_replace("+","1", $input['phone']),
                         'msg' =>  $message,
                     ];
                     $this->sendThroughCloud($data);
@@ -752,7 +752,7 @@ class ClientController extends Controller
 
                         $data = (object) [
                             'from' => str_replace("+","",$whatsapp_setting->whatsapp_vonage_from),
-                            'to' => str_replace("+","", $input['phone']),
+                            'to' => str_replace("+","1", $input['phone']),
                             'msg' =>  $message,
                         ];
                         $this->sendThroughVonage($data);
@@ -1098,12 +1098,12 @@ class ClientController extends Controller
         ));
 
         $response = curl_exec($curl);
-       //dd($response);
+        dd($response);
         curl_close($curl);
     }
 
     public function sendThroughVonage($data){
-       // dd("asa");
+
         $from = $data->from;
         $to = $data->to;
         $msg = $data->msg;
@@ -1138,7 +1138,7 @@ class ClientController extends Controller
                 curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
 
         $resp = curl_exec($curl);
-       // dd($resp);
+      //  dd($resp);
         curl_close($curl);
     }
     public function sendThroughTwilio($data){

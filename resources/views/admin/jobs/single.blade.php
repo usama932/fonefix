@@ -232,7 +232,7 @@
                       <td>
                           @foreach($user->preRepairs as $repair)
                           <div class="col-xs-4">
-                              <i class="fas @if($repair->value == "Yes") fa-check-square text-success @elseif($repair->value == "N/A" || $repair->value == "No") fa-window-close text-danger @else fa-square  @endif fa-lg"></i>
+                              <i class="fas @if($repair->value == "Yes") fa-check-square text-success @elseif( $repair->value == "No") fa-window-close text-danger @else fa-square  @endif fa-lg"></i>
                               {{$repair->name}}
                               <br>
                           </div>
